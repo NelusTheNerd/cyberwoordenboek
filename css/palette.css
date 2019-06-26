@@ -9,4 +9,6 @@
 .secondary-text-color  { color: #757575; }
 .divider-color         { border-color: #BDBDBD; }
 
+/* custom settings for colours */
 .page-footer .footer-copyright{ background-color: #FBC02D; }
+.pagination li.active a { background: #FF5252; }
