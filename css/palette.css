@@ -11,4 +11,7 @@
 
 /* custom settings for colours */
 .page-footer .footer-copyright{ background-color: #FBC02D; }
-.pagination li.active a { background: #FF5252; }
+.tabs .tab a { color: #757575; }
+
+.tabs .tab a:hover, .tabs .tab a.active { color: #212121 }
+.content { margin-top: 10px; }
