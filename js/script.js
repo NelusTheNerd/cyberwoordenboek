@@ -4,12 +4,13 @@ $(document).ready(function(){
     for (i = 0; i < alfabet.length; i++){
         $( "#pagenation" ).append( '<li class="tab col"><a href="#'+alfabet[i]+'">'+alfabet[i]+'</a></li>' );
         $( "#words" ).append( '<div id="'+alfabet[i]+'" class="col offset-s1 s10"><ul class="collapsible"></ul></div>' );
-        
-        for (j = 0; j < alfabet.length; j++){
-            $( ".collapsible" ).append('<li><div class="collapsible-header default-primary-color"><i class="material-icons">keyboard_arrow_down</i>'+alfabet[j]+'</div><div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div></li>');
-        }
-    }
 
+        $.getJSON("dictonary/"+alfabet[i]+".json", function(result){
+            $.each(result, function(i, field){
+              $("#"+alfbet[i]).append(field);
+            });
+          });
+    }
     $('.tabs').tabs();
     $('.collapsible').collapsible();
   });
